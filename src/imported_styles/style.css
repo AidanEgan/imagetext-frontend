@@ -1,0 +1,38 @@
+#header{
+  width: 95%;
+  clear: both;
+  text-align: center;
+  padding: 10px;
+  padding-bottom: 15px;
+  margin: auto;
+}
+
+#body{
+  padding-top: 10px;
+  width: 95%;
+  margin: auto;
+}
+
+#image{
+  width: 50%;
+  float: left;
+}
+
+#commandline{
+  width: 45%;
+  float: right;
+}
+
+#imgSrc{
+  width: 100%;
+}
+
+#upload{
+  width: 100%;
+  clear: both;
+}
+
+#imgSrc > img{
+  max-width: 100%;
+  margin-bottom: 15px;
+}
