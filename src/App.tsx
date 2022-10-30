@@ -87,18 +87,14 @@ const App: Component = () => {
       body: bodyData,
     };
     
-    try {
-      fetch('http://localhost:5000/api/post', requestOptions)
-          .then(response => {console.log(response); return response.json()})
-            .then(data => {
-              setBase64Image(`data:image/png;base64,${data.image}`);
-              updateCmds && setCmds(data.commands ? data.commands : []);
-              data.errors && setError(data.errors.filter((i: unknown) => i));
-            })
-            .catch(() => console.error("JSONification failed!"));
-    } catch (err) {
-      console.error("POST request failed!")
-    }
+    fetch('http://localhost:5000/api/post', requestOptions)
+      .then(response => {console.log(response); return response.json()})
+        .then(data => {
+          setBase64Image(`data:image/png;base64,${data.image}`);
+          updateCmds && setCmds(data.commands ? data.commands : []);
+          data.errors && setError(data.errors.filter((i: unknown) => i));
+        })
+        .catch(() => console.error("JSONification failed!"));
 
     return true;
   }

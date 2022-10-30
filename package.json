@@ -19,7 +19,9 @@
     "vite-plugin-solid": "^2.3.0"
   },
   "dependencies": {
+    "autoprefixer": "^10.0.2",
     "daisyui": "^2.33.0",
+    "postcss": ">=8.3.3 <9.0.0",
     "solid-js": "^1.5.1"
   }
 }
