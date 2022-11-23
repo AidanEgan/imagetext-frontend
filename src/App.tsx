@@ -178,14 +178,14 @@ const App: Component = () => {
               style={{width: "80%", float: "left"}} 
             />
             <button 
-              onClick={() => uploadNewFile()}
+              onClick={uploadNewFile}
               class="btn btn-outline-primary" 
               type="submit" 
               style={{float: "right", width: "15%", clear: "none"}}>
                 Upload
             </button>
           </div>
-          <div style={{"margin-bottom": "15px"}}>{' '}{' '}</div>
+          <div style={{"margin-bottom": "15px"}}>{'  '}</div>
           <Show when={error().length > 0}>
             <div class="alert alert-dismissible alert-danger">
               <button type="button" class="btn-close" data-bs-dismiss="alert" />
@@ -214,8 +214,17 @@ const App: Component = () => {
             id="inputDefault" 
             style={{"margin-bottom": "12px"}} 
           />
-          <button onClick={()=>submitButtonClick()} type="submit" class="btn btn-outline-primary" style={{float: "right"}}>Transform</button>
-          <button onClick={()=>undoButtonClick()} name="undo" value="undo" type="submit" class="btn btn-outline-danger" style={{float: "right", "margin-right": "15px"}}>Undo</button>
+          <button onClick={submitButtonClick} type="submit" class="btn btn-outline-primary" style={{float: "right"}}>Transform</button>
+          <button 
+            onClick={undoButtonClick} 
+            name="undo" 
+            value="undo" 
+            type="submit" 
+            class="btn btn-outline-danger" 
+            style={{ float: "right", "margin-right": "15px" }}
+          >
+            Undo
+          </button>
         </div>
         <table class="table table-hover">
           <thead>
